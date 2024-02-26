@@ -1,1 +1,1 @@
-ls -p -A -t --group-directories-first | grep -v '/|^.'
+ls -p -A -t -U --group-directories-first | grep -v '/|^.'
