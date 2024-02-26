@@ -1,0 +1,1 @@
+curl --silent "https://zone01normandie.org/assets/superhero/all.json" | jq -r --arg HERO_ID "$HERO_ID" '.[] | select(.id == 1) | .connections.relatives | gsub("\""; "")'
