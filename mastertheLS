@@ -1,1 +1,1 @@
-ls -p -m -t -U  --group-directories-first | grep -v '/|^.' | sed 's/, \s*/,/g'
+ls -p -m -U -A | grep -v '/|^.' | sed 's/, \s*/,/g'
