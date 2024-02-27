@@ -1,6 +1,5 @@
-interview_ID= grep -r "reports seeing the car that fled the scene."  | cut -d ":" -f1 | cut  -d "-" -f5 | sed 's/teacher.sh//' | tail -n 1 #Etape 1
-echo $interview_ID #Etape 2
+export ID_INTERVIEW="$(grep -R "L337" interviews | cut -d ':' -f 1 | rev | cut -d '-' -f 1 | rev)"
 
-grep -r "reports seeing the car that fled the scene."  | cut -d ":" -f2
-
+echo $ID_INTERVIEW
+cat "interviews/interview-"$ID_INTERVIEW
 echo $MAIN_SUSPECT
