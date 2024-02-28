@@ -15,7 +15,6 @@ func MyItos(n int) string {
 		n = -n
 	}
 	n2 := int64(n)
-	println(n)
 	for n2 < 0 {
 		var tempN int64 = n2 % 10
 		numberToString = string(rune(tempN+'0')) + numberToString
