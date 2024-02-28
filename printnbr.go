@@ -28,7 +28,31 @@ func MyItos(n int) string {
 }
 
 func PrintNbr(n int) {
-	for _, val := range MyItos(n) {
-		z01.PrintRune(val)
+
+	if n == -9223372036854775808 {
+		z01.PrintRune('-')
+		z01.PrintRune('9')
+		z01.PrintRune('2')
+		z01.PrintRune('2')
+		z01.PrintRune('3')
+		z01.PrintRune('3')
+		z01.PrintRune('7')
+		z01.PrintRune('2')
+		z01.PrintRune('0')
+		z01.PrintRune('3')
+		z01.PrintRune('6')
+		z01.PrintRune('8')
+		z01.PrintRune('5')
+		z01.PrintRune('4')
+		z01.PrintRune('7')
+		z01.PrintRune('7')
+		z01.PrintRune('5')
+		z01.PrintRune('8')
+		z01.PrintRune('0')
+		z01.PrintRune('8')
+	} else {
+		for _, val := range MyItos(n) {
+			z01.PrintRune(val)
+		}
 	}
 }
