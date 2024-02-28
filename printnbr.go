@@ -29,7 +29,3 @@ func PrintNbr(n int) {
 	}
 
 }
-
-func main() {
-	PrintNbr(-5133523972978161936)
-}
