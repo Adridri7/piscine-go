@@ -4,30 +4,31 @@ import (
 	"github.com/01-edu/z01"
 )
 
-var r []rune
-
-func PrintNbr(n int) {
-	var n1 uint32
-	if n < 0 {
-		z01.PrintRune('-')
-		n *= -1
-	}
+func MyItos(n int) string {
+	var numberToString string
+	var isNegative bool
 
 	if n == 0 {
-		z01.PrintRune('0')
+		return "0"
+	}
+	if n < 0 {
+		isNegative = true
+		n = -n
+	}
+	for n > 0 {
+		var tempN int = n % 10
+		numberToString = string(rune(tempN+'0')) + numberToString
+		n /= 10
+	}
+	if isNegative {
+		numberToString = "-" + numberToString
 	}
 
-	n1 = uint32(n)
+	return numberToString
+}
 
-	for {
-		if n1 == 0 {
-			break
-		}
-		r = append(r, rune(n1%10+'0'))
-		n1 /= 10
-	}
-
-	for i := len(r) - 1; 0 <= i; i-- {
-		z01.PrintRune(r[i])
+func PrintNbr(n int) {
+	for _, val := range MyItos(n) {
+		z01.PrintRune(val)
 	}
 }
