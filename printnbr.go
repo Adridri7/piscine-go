@@ -7,7 +7,7 @@ import (
 var r []rune
 
 func PrintNbr(n int) {
-	var n1 uint64
+	var n1 uint16
 	if n < 0 {
 		z01.PrintRune('-')
 		n *= -1
@@ -17,7 +17,7 @@ func PrintNbr(n int) {
 		z01.PrintRune('0')
 	}
 
-	n1 = uint64(n)
+	n1 = uint16(n)
 
 	for n1 != 0 {
 		r = append(r, rune(n1%10+'0'))
