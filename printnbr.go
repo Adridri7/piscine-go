@@ -4,40 +4,22 @@ import (
 	"github.com/01-edu/z01"
 )
 
+var r []rune
+
 func PrintNbr(n int) {
-	for _, val := range intToString(n) {
-		z01.PrintRune(val)
-	}
-}
-
-func intToString(num int) string {
-	if num == 0 {
-		return "0"
+	var n1 uint
+	if n < 0 {
+		z01.PrintRune('-')
+		n *= -1
+		n1 = uint(n)
 	}
 
-	var result []rune
-
-	isNegative := false
-	if num < 0 {
-		isNegative = true
-		num = -num
+	for n1 != 0 {
+		r = append(r, rune(n1%10+'0'))
+		n1 /= 10
 	}
 
-	for num != 0 {
-		digit := num % 10
-		result = append(result, rune(digit+'0'))
-		num /= 10
+	for i := len(r) - 1; 0 <= i; i-- {
+		z01.PrintRune(r[i])
 	}
-
-	if isNegative {
-		result = append(result, '-')
-	}
-
-	// Inverse la chaîne résultante
-	length := len(result)
-	for i := 0; i < length/2; i++ {
-		result[i], result[length-i-1] = result[length-i-1], result[i]
-	}
-
-	return string(result)
 }
