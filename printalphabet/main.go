@@ -1,5 +1,13 @@
-package printalphabet
+package main
+
+import (
+	"github.com/01-edu/z01"
+)
 
 func main() {
-	print("abcdefghijklmnopqrstuvwxyz")
+	var i rune
+	for i = 97; i <= 122; i++ {
+		z01.PrintRune(i)
+	}
+
 }
