@@ -14,6 +14,8 @@ func PrintComb() {
 				if a != '7' || b != '8' || c != '9' {
 					z01.PrintRune(',')
 					z01.PrintRune(' ')
+				}else {
+					z01.PrintRune('\n')
 				}
 			}
 		}
