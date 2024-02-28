@@ -19,7 +19,11 @@ func PrintNbr(n int) {
 
 	n1 = uint64(n)
 
-	for n1 != 0 {
+	for {
+		if n1 == 0 {
+			r = append(r, rune(n1%10+'0'))
+			break
+		}
 		r = append(r, rune(n1%10+'0'))
 		n1 /= 10
 	}
@@ -27,5 +31,4 @@ func PrintNbr(n int) {
 	for i := len(r) - 1; 0 <= i; i-- {
 		z01.PrintRune(r[i])
 	}
-	z01.PrintRune(' ')
 }
