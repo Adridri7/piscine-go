@@ -4,54 +4,32 @@ import (
 	"github.com/01-edu/z01"
 )
 
-var r []rune
+func MyItos(n int) string {
+	var numberToString string
+	var isNegative bool
+	if n == 0 {
+		return "0"
+	}
+	if n < 0 {
+		isNegative = true
+		n = -n
+	}
+	n2 := int64(n)
+	println(n)
+	for n2 < 0 {
+		var tempN int64 = n2 % 10
+		numberToString = string(rune(tempN+'0')) + numberToString
+		n2 /= 10
+	}
+	if isNegative {
+		numberToString = "-" + numberToString
+	}
+
+	return numberToString
+}
 
 func PrintNbr(n int) {
-
-	if n == -9223372036854775808 {
-		z01.PrintRune('-')
-		z01.PrintRune('9')
-		z01.PrintRune('2')
-		z01.PrintRune('2')
-		z01.PrintRune('3')
-		z01.PrintRune('3')
-		z01.PrintRune('7')
-		z01.PrintRune('2')
-		z01.PrintRune('0')
-		z01.PrintRune('3')
-		z01.PrintRune('6')
-		z01.PrintRune('8')
-		z01.PrintRune('5')
-		z01.PrintRune('4')
-		z01.PrintRune('7')
-		z01.PrintRune('7')
-		z01.PrintRune('5')
-		z01.PrintRune('8')
-		z01.PrintRune('0')
-		z01.PrintRune('8')
-	} else {
-		var n1 uint
-		if n < 0 {
-			z01.PrintRune('-')
-			n *= -1
-		}
-
-		if n == 0 {
-			z01.PrintRune('0')
-		}
-
-		n1 = uint(n)
-
-		for {
-			if n1 == 0 {
-				break
-			}
-			r = append(r, rune(n1%10+'0'))
-			n1 /= 10
-		}
-
-		for i := len(r) - 1; 0 <= i; i-- {
-			z01.PrintRune(r[i])
-		}
+	for _, val := range MyItos(n) {
+		z01.PrintRune(val)
 	}
 }
