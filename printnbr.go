@@ -23,12 +23,10 @@ func MyItos(n int) string {
 	if isNegative {
 		numberToString = "-" + numberToString
 	}
-
 	return numberToString
 }
 
 func PrintNbr(n int) {
-
 	if n == -9223372036854775808 {
 		z01.PrintRune('-')
 		z01.PrintRune('9')
