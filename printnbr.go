@@ -21,7 +21,7 @@ func PrintNbr(n int) {
 
 	for {
 		if n1 == 0 {
-			r = append(r, rune(n1%10+'0'))
+
 			break
 		}
 		r = append(r, rune(n1%10+'0'))
