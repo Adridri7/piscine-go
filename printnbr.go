@@ -6,22 +6,16 @@ import (
 
 func MyItos(n int) string {
 	var numberToString string
-	var isNegative bool
 	if n == 0 {
 		return "0"
 	}
 	if n < 0 {
-		isNegative = true
+		z01.PrintRune('-')
 		n = -n
 	}
-	n2 := int64(n)
-	for n2 < 0 {
-		var tempN int64 = n2 % 10
-		numberToString = string(rune(tempN+'0')) + numberToString
-		n2 /= 10
-	}
-	if isNegative {
-		numberToString = "-" + numberToString
+	for n != 0 {
+		numberToString = string(rune(n%10+'0')) + numberToString
+		n /= 10
 	}
 	return numberToString
 }
