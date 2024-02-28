@@ -11,8 +11,8 @@ func PrintNbr(n int) {
 	if n < 0 {
 		z01.PrintRune('-')
 		n *= -1
-		n1 = uint(n)
 	}
+	n1 = uint(n)
 
 	for n1 != 0 {
 		r = append(r, rune(n1%10+'0'))
