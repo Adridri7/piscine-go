@@ -1,39 +1,18 @@
 package piscine
 
-func Atoi(s string) int {
+func Atoi(str string) int {
 	result := 0
 	sign := 1
 
-    if s == ""{
-      return 0
-    }
-
-    if s == "-"{
-      return 0
-    } 
-    if s == "+"{
-      return 0
-    }
-
-	if s[0] == '-' {
+	// Gérer le signe
+	if str[0] == '-' {
 		sign = -1
-		s = s[1:]
-		if s[1] == '-' {
-			sign = 1
-			s = s[2:]
-		}
+		str = str[1:]
+	} else if str[0] == '+' {
+		str = str[1:]
 	}
 
-	if s[0] == '+' {
-		sign = 1
-		s = s[1:]
-		if s[1] == '+' {
-			sign = 1
-			s = s[1:]
-		}
-	}
-
-	for _, char := range s {
+	for _, char := range str {
 		if char < '0' || char > '9' {
 			return 0
 		}
