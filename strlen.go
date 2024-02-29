@@ -1,8 +1,11 @@
 package piscine
 
+
 func StrLen(s string) int {
-	s_byte := []byte(s)
+	count := 0
+	for idx := range s {
+		count = idx
+	}
 
-	return len(s_byte)
+	return count
 }
-
