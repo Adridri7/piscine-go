@@ -4,6 +4,10 @@ func Atoi(s string) int {
 	result := 0
 	sign := 1
 
+    if s == ""{
+      return 0
+    }
+
 	if s[0] == '-' {
 		sign = -1
 		s = s[1:]
