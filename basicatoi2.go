@@ -3,12 +3,8 @@ package piscine
 func BasicAtoi2(s string) int {
 	result := 0
 
-	if s == "9223372036854775807" {
-		return 9223372036854775807
-	}
-
 	for _, char := range s {
-		if char <= '0' || char >= '9' {
+		if char < '0' || char > '9' {
 			return 0
 		}
 		digit := int(char - '0')
