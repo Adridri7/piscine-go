@@ -8,12 +8,17 @@ func Atoi(s string) int {
       return 0
     }
 
+    if len(s) == 1{
+        digit := int(s[0] - '0')
+    	result = result*10 + digit
+    }
+
 	if s[0] == '-' {
 		sign = -1
 		s = s[1:]
 		if s[1] == '-' {
 			sign = 1
-			s = s[1:]
+			s = s[2:]
 		}
 	}
 
