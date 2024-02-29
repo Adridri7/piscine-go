@@ -8,9 +8,11 @@ func Atoi(s string) int {
       return 0
     }
 
-    if len(s) == 1{
-        digit := int(s[0] - '0')
-    	result = result*10 + digit
+    if s == "-"{
+      return 0
+    } 
+    if s == "+"{
+      return 0
     }
 
 	if s[0] == '-' {
