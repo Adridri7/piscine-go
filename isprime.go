@@ -7,7 +7,6 @@ func IsPrime(nb int) bool {
 			tab = append(tab, i)
 		}
 	}
-
 	if len(tab) == 2 {
 		cpt := 0
 		for _, val := range tab {
