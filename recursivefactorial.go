@@ -8,7 +8,5 @@ func RecursiveFactorial(nb int) int {
 	} else if nb > 65 {
 		return 0
 	}
-
 	return nb * RecursiveFactorial(nb-1)
-
 }
