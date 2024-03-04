@@ -2,7 +2,7 @@ package piscine
 
 func IsPrime(nb int) bool {
 	tab := []int{}
-	for i := 1; i <= nb; i++ {
+	for i := 1; i <= nb; i += 2 { // réduction par 2 du nombre d'itérations
 		if nb%i == 0 {
 			tab = append(tab, i)
 		}
