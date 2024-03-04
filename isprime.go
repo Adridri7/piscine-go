@@ -10,8 +10,8 @@ func IsPrime(n int) bool {
 	if n%2 == 0 || n%3 == 0 {
 		return false
 	}
-	for i := 10; i*i <= n; i += 6 {
-		if n%i == 0 || n%(i+2) == 0 {
+	for i := 3; i < n/3; i += 2 {
+		if n%i == 0 {
 			return false
 		}
 	}
