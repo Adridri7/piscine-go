@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.FindNextPrime(10))
-	fmt.Println(piscine.FindNextPrime(5))
+	fmt.Println(piscine.IsPrime(7))
+	fmt.Println(piscine.IsPrime(5))
 }
