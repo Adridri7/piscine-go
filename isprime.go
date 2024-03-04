@@ -5,7 +5,10 @@ func IsPrime(nb int) bool {
 	if nb == 2 { // Seul parmis les nombres pairs
 		return true
 	}
-	for i := 1; i <= nb; i += 2 { // réduction par 2 du nombre d'itérations
+	if nb%2 == 0 {
+		return false
+	}
+	for i := 3; i <= nb; i += 2 { // réduction par 2 du nombre d'itérations
 		if nb%i == 0 {
 			tab = append(tab, i)
 		}
