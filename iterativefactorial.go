@@ -11,5 +11,9 @@ func IterativeFactorial(nb int) int {
 	for i := 1; i <= nb; i++ {
 		res *= i
 	}
+
+	if res < 0 {
+		return 0
+	}
 	return res
 }
