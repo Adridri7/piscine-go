@@ -6,5 +6,9 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.IsUpper("Y8Y3!p^M}SF&,"))
+	fmt.Println(piscine.IsAlpha("Hello! How are you?"))
+	fmt.Println(piscine.IsAlpha("HelloHowareyou"))
+	fmt.Println(piscine.IsAlpha("What's this 4?"))
+	fmt.Println(piscine.IsAlpha("Whatsthis4"))
+
 }
