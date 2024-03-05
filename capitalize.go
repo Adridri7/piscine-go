@@ -11,7 +11,6 @@ func Capitalize(s string) string {
 		} else {
 			tmp += string(val)
 		}
-
 	}
 	res += maj(tmp)
 	return res
