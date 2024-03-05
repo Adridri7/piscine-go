@@ -13,9 +13,15 @@ func PrintNbrBase(nbr int, base string) {
 			is_negative = true
 			nbr = -nbr
 		}
-		for nbr != 0 {
-			str = string(base[(nbr%len(base))-1]) + str
-			nbr /= len(base)
+		if nbr == 0 {
+			i := nbr % len(base)
+			str = string(base[i]) + str
+		} else {
+			for nbr != 0 {
+				i := nbr % len(base)
+				str = string(base[i]) + str
+				nbr /= len(base)
+			}
 		}
 		if is_negative {
 			str = "-" + str
