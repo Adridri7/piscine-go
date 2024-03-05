@@ -14,6 +14,10 @@ func PrintNbrInOrder(n int) {
 
 func ItoT(n int) []int {
 	tab := []int{}
+	if n == 0 {
+		tab = append(tab, 0)
+		return tab
+	}
 	for n != 0 {
 		tab = append(tab, n%10)
 		n /= 10
