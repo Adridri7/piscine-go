@@ -2,7 +2,7 @@ package piscine
 
 func FirstRune(s string) rune {
   if len(s) >= 1{
-    return rune(s[0])
+    for _, char
   }
   return rune('\n')
 }
