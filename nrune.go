@@ -1,11 +1,13 @@
 package piscine
 
 func NRune(s string, n int) rune {
-	if n > len(s)-1 || -n > len(s) {
+	if n < 0 {
 		return 0
 	}
-	if n < 0 {
-		return rune(s[len(s)+n])
+	for idx, char := range s {
+		if idx == n-1 {
+			return rune(char)
+		}
 	}
-	return rune(s[n-1])
+	return 0
 }
