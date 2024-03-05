@@ -9,19 +9,24 @@ func PrintNbrBase(nbr int, base string) {
 	} else {
 		str := ""
 		is_negative := false
-		if nbr < 0 {
-			is_negative = true
-			nbr = -nbr
-		}
+		var n uint
 		if nbr == 0 {
 			i := nbr % len(base)
 			str = string(base[i]) + str
+		}
+		if nbr < 0 {
+			is_negative = true
+			n = uint(-nbr)
+
+			for n != 0 {
+				i := n % uint(len(base))
+				str = string(base[i]) + str
+				n /= uint(len(base))
+			}
 		} else {
 			for nbr != 0 {
 				i := nbr % len(base)
-				if i >= 0 {
-					str = string(base[i]) + str
-				}
+				str = string(base[i]) + str
 				nbr /= len(base)
 			}
 		}
