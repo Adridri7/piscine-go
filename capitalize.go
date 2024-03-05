@@ -5,7 +5,6 @@ func Capitalize(s string) string {
 	res := ""
 	for _, val := range s {
 		if !(val >= 'A' && val <= 'Z') && !(val >= 'a' && val <= 'z') && !(val >= '0' && val <= '9') {
-
 			res += maj(tmp)
 			res += string(val)
 			tmp = ""
@@ -14,7 +13,7 @@ func Capitalize(s string) string {
 		}
 
 	}
-    res += maj(tmp)
+	res += maj(tmp)
 	return res
 }
 
@@ -34,7 +33,6 @@ func maj(s string) string {
 			}
 		}
 	}
-
 	for _, val := range tab {
 		res += string(val)
 	}
