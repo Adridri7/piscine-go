@@ -19,7 +19,9 @@ func PrintNbrBase(nbr int, base string) {
 		} else {
 			for nbr != 0 {
 				i := nbr % len(base)
-				str = string(base[i]) + str
+				if i >= 0 {
+					str = string(base[i]) + str
+				}
 				nbr /= len(base)
 			}
 		}
