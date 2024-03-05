@@ -14,4 +14,5 @@ func main() {
 	fmt.Println(piscine.TrimAtoi("sd-x1fa2W3s4"))
 	fmt.Println(piscine.TrimAtoi("sdx1-fa2W3s4"))
 	fmt.Println(piscine.TrimAtoi("sdx1+fa2W3s4"))
+	fmt.Println(piscine.TrimAtoi("4"))
 }

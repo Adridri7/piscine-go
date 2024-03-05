@@ -2,17 +2,17 @@ package piscine
 
 func TrimAtoi(s string) int {
 	tmp := ""
-	var ind int = -1
-	for idx, val := range s {
+	i := -1
+	for _, val := range s {
 		if val >= '0' && val <= '9' {
+			i++
 			tmp += string(val)
-			ind = idx
+
 		} else if val == '-' {
-			if ind == -1 {
+			if i == -1 {
 				tmp = "-" + tmp
 			}
 		}
 	}
-
 	return Atoi(tmp)
 }

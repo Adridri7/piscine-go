@@ -1,33 +1,38 @@
 package piscine
 
-func Atoi(str string) int {
+func Atoi(s string) int {
+	runes := []rune(s)
+	LenRune := 0
 	result := 0
-	sign := 1
-
-	if len(str) == 0 {
-		return 0 // Retourner 0 si la chaîne est vide
+	for i := range runes {
+		LenRune = i + 1
 	}
-
-	if len(str) == 1 {
-		digit := int(str[0] - '0')
-		result = result*10 + digit
-		return 0 // Retourner 0 si la chaîne est vide
+	if LenRune == 0 {
+		return 0
 	}
-	// Gérer le signe
-	if str[0] == '-' {
-		sign = -1
-		str = str[1:]
-	} else if str[0] == '+' {
-		str = str[1:]
+	tens := 1
+	for k := 0; k < LenRune-1; k++ {
+		if runes[k] == '+' || runes[k] == '-' {
+			continue
+		}
+		tens *= 10
 	}
-
-	for _, char := range str {
-		if char < '0' || char > '9' {
+	for i := range runes {
+		if (runes[0] == '-' || runes[0] == '+') && i == 0 {
+			continue
+		}
+		if runes[i] < '0' || runes[i] > '9' {
 			return 0
 		}
-		digit := int(char - '0')
-		result = result*10 + digit
+		numb := 0
+		for j := '0'; j < runes[i]; j++ {
+			numb++
+		}
+		result += numb * tens
+		tens /= 10
 	}
-
-	return result * sign
+	if runes[0] == '-' {
+		result *= -1
+	}
+	return result
 }
