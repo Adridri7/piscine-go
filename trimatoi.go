@@ -2,13 +2,13 @@ package piscine
 
 func TrimAtoi(s string) int {
 	tmp := ""
-	cpt := 0
-	for _, val := range s {
+	var ind int = -1
+	for idx, val := range s {
 		if val >= '0' && val <= '9' {
 			tmp += string(val)
-			cpt++
+			ind = idx
 		} else if val == '-' {
-			if cpt != 1 {
+			if ind == -1 {
 				tmp = "-" + tmp
 			}
 		}
