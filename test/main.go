@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.Concat("Hello!", " How are you?"))
+	fmt.Println(piscine.IsUpper("Y8Y3!p^M}SF&,"))
 }
