@@ -13,6 +13,8 @@ func main() {
 
 func printstrRune(s string) {
 	for _, char := range s {
-		z01.PrintRune(char)
+		if char != '/' && char != '.' {
+			z01.PrintRune(char)
+		}
 	}
 }
