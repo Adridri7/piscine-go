@@ -8,11 +8,7 @@ import (
 
 func main() {
 	args := os.Args
-	printstrRune(args[0])
-}
-
-func printstrRune(s string) {
-	for _, char := range s {
+	for _, char := range args[0] {
 		if char != '/' && char != '.' {
 			z01.PrintRune(char)
 		}
