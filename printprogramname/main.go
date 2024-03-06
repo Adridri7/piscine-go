@@ -7,10 +7,8 @@ import (
 )
 
 func main() {
-
 	args := os.Args
-	print(args[0])
-
+	print(args[0][1:])
 }
 
 func print(s string) {
