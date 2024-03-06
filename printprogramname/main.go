@@ -8,7 +8,7 @@ import (
 
 func main() {
 	args := os.Args
-	printstrRune(args[0][1:])
+	printstrRune(args[0])
 }
 
 func printstrRune(s string) {
