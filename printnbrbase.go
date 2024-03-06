@@ -8,30 +8,25 @@ func PrintNbrBase(nbr int, base string) {
 		z01.PrintRune('V')
 	} else {
 		str := ""
-		is_negative := false
 		var n uint
 		if nbr == 0 {
 			i := nbr % len(base)
 			str = string(base[i]) + str
 		}
 		if nbr < 0 {
-			is_negative = true
 			n = uint(-nbr)
-
 			for n != 0 {
 				i := n % uint(len(base))
 				str = string(base[i]) + str
 				n /= uint(len(base))
 			}
+			str = "-" + str
 		} else {
 			for nbr != 0 {
 				i := nbr % len(base)
 				str = string(base[i]) + str
 				nbr /= len(base)
 			}
-		}
-		if is_negative {
-			str = "-" + str
 		}
 		for _, char := range str {
 			z01.PrintRune(char)
