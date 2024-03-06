@@ -23,7 +23,7 @@ func main() {
 func sortAlpha(tab []string) {
 	for i := 1; i <= len(tab)-1; i++ {
 		for j := i + 1; i <= len(tab)-1; i++ {
-			if tab[i] < tab[j] {
+			if tab[i] > tab[j] {
 				swapstr(&tab[i], &tab[j])
 			}
 		}
