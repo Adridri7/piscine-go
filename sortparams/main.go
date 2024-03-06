@@ -27,7 +27,6 @@ func sortAlpha(tab []string) {
 				swapstr(&tab[i], &tab[j])
 			}
 		}
-
 	}
 }
 
