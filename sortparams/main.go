@@ -7,7 +7,6 @@ import (
 )
 
 func main() {
-
 	args := os.Args
 	sortAlpha(args)
 
