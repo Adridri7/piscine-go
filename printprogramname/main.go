@@ -8,10 +8,10 @@ import (
 
 func main() {
 	args := os.Args
-	print(args[0][1:])
+	printstrRune(args[0][1:])
 }
 
-func print(s string) {
+func printstrRune(s string) {
 	for _, char := range s {
 		z01.PrintRune(char)
 	}
