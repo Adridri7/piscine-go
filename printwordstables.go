@@ -3,12 +3,9 @@ package piscine
 import "github.com/01-edu/z01"
 
 func PrintWordsTables(a []string) {
-	for idx, str := range a {
+	for _, str := range a {
 		printstr(str)
-		if idx != len(a)-1 {
-			z01.PrintRune('\n')
-		}
-
+		z01.PrintRune('\n')
 	}
 }
 
