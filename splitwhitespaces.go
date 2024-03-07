@@ -5,9 +5,10 @@ func SplitWhiteSpaces(s string) (tab []string) {
 
 	for _, char := range s {
 		if char == ' ' {
-			tab = append(tab, tmp)
+			if tmp != "" {
+				tab = append(tab, tmp)
+			}
 			tmp = ""
-
 		} else {
 			tmp += string(char)
 		}
