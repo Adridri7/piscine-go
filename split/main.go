@@ -1,4 +1,11 @@
-package piscine
+package main
+
+import "fmt"
+
+func main() {
+	s := "HelloHAhowHAareHAyou?"
+	fmt.Printf("%#v\n", Split(s, "HA"))
+}
 
 func Split(s, sep string) (tab []string) {
 	tmp_str := ""
@@ -11,7 +18,8 @@ func Split(s, sep string) (tab []string) {
 			tmp_str += string(s[i])
 		}
 	}
-	tmp_str += string(s[len(s)-len(sep)+1:])
+	tmp_str += string(s[len(s)-len(sep)+1 : len(s)])
+	tab = append(tab, tmp_str)
 	tab = append(tab, tmp_str)
 	return tab
 }
