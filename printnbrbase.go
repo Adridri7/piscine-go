@@ -34,7 +34,6 @@ func PrintNbrBase(nbr int, base string) string {
 		//}
 	}
 	return ""
-
 }
 
 func isValidBase(base string) bool {
