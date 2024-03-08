@@ -2,7 +2,7 @@ package piscine
 
 import "github.com/01-edu/z01"
 
-func PrintNbrBase(nbr int, base string) {
+func PrintNbrBase(nbr int, base string) string {
 	if !isValidBase(base) {
 		z01.PrintRune('N')
 		z01.PrintRune('V')
@@ -28,10 +28,13 @@ func PrintNbrBase(nbr int, base string) {
 				nbr /= len(base)
 			}
 		}
-		for _, char := range str {
-			z01.PrintRune(char)
-		}
+		return str
+		//for _, char := range str {
+		//	z01.PrintRune(char)
+		//}
 	}
+	return ""
+
 }
 
 func isValidBase(base string) bool {
