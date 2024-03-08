@@ -18,7 +18,7 @@ func main() {
 
 	if len(args) == 0 || args[0] == "-h" || args[0] == "--help" {
 		fmt.Println(str_info)
-	} else if len(args) == 1 && args[0] != "--insert" && args[0] != "-i" && args[0] != "--order" && args[0] != "-o" {
-		fmt.Println(args[0])
+	} else if len(args) == 1 && args[0][0:9] != "--insert" && args[0][0:3] != "-i" && args[0][0:8] != "--order" && args[0][0:3] != "-o" {
+		fmt.Println("caca")
 	}
 }
