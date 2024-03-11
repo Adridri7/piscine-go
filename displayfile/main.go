@@ -22,6 +22,6 @@ func main() {
 		}
 		fmt.Println(string(file))
 	} else if len(args) > 1 {
-		fmt.Println("Too many arguments")
+		fmt.Println("Too many arguments\n")
 	}
 }
