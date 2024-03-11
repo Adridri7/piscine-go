@@ -10,7 +10,7 @@ func main() {
 	args := os.Args[1:]
 
 	if len(args) == 0 {
-		fmt.Print("File name missing")
+		fmt.Print("File name missing\n")
 		return
 	}
 
