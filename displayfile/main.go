@@ -20,7 +20,7 @@ func main() {
 			fmt.Println(err)
 			return
 		}
-		fmt.Println(string(file))
+		fmt.Print(string(file))
 	} else if len(args) > 1 {
 		fmt.Println("Too many arguments\n")
 	}
