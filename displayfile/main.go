@@ -10,7 +10,7 @@ func main() {
 	args := os.Args[1:]
 
 	if len(args) == 0 {
-		fmt.Print("File name missing\n")
+		fmt.Println("File name missing")
 		return
 	}
 
@@ -22,6 +22,6 @@ func main() {
 		}
 		fmt.Print(string(file))
 	} else if len(args) > 1 {
-		fmt.Println("Too many arguments\n")
+		fmt.Println("Too many arguments")
 	}
 }
