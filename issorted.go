@@ -11,7 +11,6 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 }
 
 func sortIntegerTable(table []int) []int {
-
 	tab := table
 	for i := 0; i < len(tab); i++ {
 		for j := 0; j < len(tab); j++ {
