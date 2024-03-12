@@ -1,22 +1,24 @@
 package piscine
 
 func IsSorted(f func(a, b int) int, a []int) bool {
+	t := sortIntegerTable(a)
 	for i := 0; i <= len(a)-1; i++ {
-		for j := i + 1; j <= len(a)-1; j++ {
-			if check(a[i], a[j]) == -1 {
-				return false
-			}
+		if t[i] != a[i] {
+			return false
 		}
 	}
 	return true
 }
 
-func check(a, b int) int {
-	if a > b {
-		return 1
-	} else if a == b {
-		return 0
-	} else {
-		return -1
+func sortIntegerTable(table []int) []int {
+
+	tab := table
+	for i := 0; i < len(tab); i++ {
+		for j := 0; j < len(tab); j++ {
+			if tab[j] > table[i] {
+				Swap(&tab[i], &tab[j])
+			}
+		}
 	}
+	return tab
 }
