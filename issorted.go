@@ -4,11 +4,11 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 	for i := 0; i <= len(a)-1; i++ {
 		for j := 0; j <= len(a)-1; j++ {
 			if check(a[i], a[j]) == -1 {
-				return false
+				return true
 			}
 		}
 	}
-	return true
+	return false
 }
 
 func check(a, b int) int {
