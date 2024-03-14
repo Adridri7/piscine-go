@@ -2,7 +2,7 @@ package piscine
 
 func Rot14(s string) (res string) {
   for _, char := range s{
-    if char == ' ' || char == '!' || char == '?'{
+    if char == ' ' || char == '!' || char == '?' || char >= '0' && char <= '9'{
       res += string(char)
     } else{
       if char >= 'a' && char <= 'z'{
