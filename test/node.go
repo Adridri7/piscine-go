@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-
 	"piscine"
 )
 
@@ -30,7 +29,6 @@ func printList(head *Node) {
 }
 
 func main() {
-
 	link := &piscine.List{}
 
 	piscine.ListPushFront(link, "Hello")
