@@ -1,6 +1,16 @@
 package piscine 
 
-func ListSize(l *List) int {
+type nodeL struct {
+	Data interface{}
+	Next *nodeL
+}
+
+type list struct {
+	Head *nodeL
+	Tail *nodeL
+}
+
+func ListSize(l *list) int {
   cpt := 0
   n := l.Head
   for n != nil {
