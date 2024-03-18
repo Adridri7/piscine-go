@@ -1,4 +1,4 @@
-package piscine 
+package piscine
 
 type NodeL struct {
 	Data interface{}
@@ -11,11 +11,11 @@ type List struct {
 }
 
 func ListSize(l *List) int {
-  cpt := 0
-  n := l.Head
-  for n != nil {
-    cpt ++
-    n = n.Next
-  }
-  return cpt
+	cpt := 0
+	n := l.Head
+	for n != nil {
+		cpt++
+		n = n.Next
+	}
+	return cpt
 }
