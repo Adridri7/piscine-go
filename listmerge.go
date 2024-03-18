@@ -15,5 +15,4 @@ func ListMerge(l1 *List, l2 *List) {
 	}
 	a.Next = l2.Head
 	l1.Tail = l2.Tail
-
 }
