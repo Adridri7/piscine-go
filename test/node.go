@@ -9,14 +9,12 @@ type Node struct {
 
 func insert(head *Node, data int) *Node {
 	n := &Node{data: data}
-
 	if head == nil {
 		return n
 	} else {
 		n.next = head
 		return n
 	}
-
 }
 
 func printList(head *Node) {
@@ -29,7 +27,6 @@ func printList(head *Node) {
 
 func main() {
 	var link *Node
-
 	link = insert(link, 0)
 	link = insert(link, 1)
 	link = insert(link, 2)
