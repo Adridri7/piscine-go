@@ -1,21 +1,21 @@
 package piscine 
 
-type nodeL struct {
+type NodeL struct {
 	Data interface{}
-	Next *nodeL
+	Next *NodeL
 }
 
-type list struct {
-	Head *nodeL
-	Tail *nodeL
+type List struct {
+	Head *NodeL
+	Tail *NodeL
 }
 
-func ListSize(l *list) int {
+func ListSize(l *List) int {
   cpt := 0
   n := l.Head
   for n != nil {
-    n = n.Next
     cpt ++
+    n = n.Next
   }
   return cpt
 }
