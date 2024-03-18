@@ -14,8 +14,8 @@ func ListSize(l *list) int {
   cpt := 0
   n := l.Head
   for n != nil {
-    cpt ++
     n = n.Next
+    cpt ++
   }
   return cpt
 }
