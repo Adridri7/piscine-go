@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"piscine"
+)
 
 type Node struct {
 	data int
@@ -26,10 +30,17 @@ func printList(head *Node) {
 }
 
 func main() {
-	var link *Node
-	link = insert(link, 0)
-	link = insert(link, 1)
-	link = insert(link, 2)
-	link = insert(link, 3)
-	printList(link)
+
+	link := &piscine.List{}
+
+	piscine.ListPushFront(link, "Hello")
+	piscine.ListPushFront(link, "man")
+	piscine.ListPushFront(link, "how are you")
+
+	it := link.Head
+	for it != nil {
+		fmt.Print(it.Data, " ")
+		it = it.Next
+	}
+	fmt.Println()
 }
