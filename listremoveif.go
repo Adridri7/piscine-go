@@ -11,10 +11,6 @@ type List struct {
 }
 
 func ListRemoveIf(l *List, data_ref interface{}) {
-  if l == nil {
-    return
-  }
-
   current := l.Head
 
   for current != nil {
@@ -23,5 +19,4 @@ func ListRemoveIf(l *List, data_ref interface{}) {
     }
     current = current.Next
   }
-  return nil
 }
