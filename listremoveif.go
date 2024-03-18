@@ -23,4 +23,5 @@ func ListRemoveIf(l *List, data_ref interface{}) {
     }
     current = current.Next
   }
+  return nil
 }
