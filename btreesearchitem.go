@@ -16,5 +16,5 @@ func BTreeSearchItem(root *TreeNode, elem string) *TreeNode {
 		return found
 	}
 
-	return root
+	return nil
 }
