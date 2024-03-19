@@ -2,11 +2,10 @@ package piscine
 
 func BTreeSearchItem(root *TreeNode, elem string) *TreeNode {
 	if root == nil {
-		return root
+		return nil
 	}
-	x := root
-	if x.Data == elem {
-		return x
+	if root.Data == elem {
+		return root
 	}
 
 	if found := BTreeSearchItem(root.Left, elem); found != nil {
@@ -17,5 +16,5 @@ func BTreeSearchItem(root *TreeNode, elem string) *TreeNode {
 		return found
 	}
 
-	return nil
+	return root
 }
