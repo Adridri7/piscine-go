@@ -9,15 +9,13 @@ func BTreeSearchItem(root *TreeNode, elem string) *TreeNode {
 		return x
 	}
 
-	if x.Data < elem {
-		found := BTreeInsertData(root.Left, elem)
-		if found != nil {
-			return found
-		}
+	if found := BTreeSearchItem(root.Left, elem); found != nil {
+		return found
 	}
 
-	if x.Data > elem {
-		return root.Right
+	if found := BTreeSearchItem(root.Right, elem); found != nil {
+		return found
 	}
+
 	return nil
 }
