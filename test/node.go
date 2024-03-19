@@ -28,7 +28,7 @@ func printList(head *Node) {
 	fmt.Println(nil)
 }
 
-func main() {
+/*func main() {
 	link := &piscine.List{}
 
 	piscine.ListPushFront(link, "Hello")
@@ -41,4 +41,13 @@ func main() {
 		it = it.Next
 	}
 	fmt.Println()
+}*/
+
+func main() {
+	root := &piscine.TreeNode{Data: "4"}
+	piscine.BTreeInsertData(root, "1")
+	piscine.BTreeInsertData(root, "7")
+	piscine.BTreeInsertData(root, "5")
+	piscine.BTreeApplyInorder(root, fmt.Println)
+
 }
