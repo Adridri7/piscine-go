@@ -5,9 +5,9 @@ func BTreeApplyPreorder(root *TreeNode, f func(...interface{}) (int, error)) {
 		return
 	}
 	BTreeApplyPostorder(root.Right, f)
+	BTreeApplyPostorder(root.Left, f)
 	_, err := f(root.Data)
 	if err != nil {
 		return
 	}
-	BTreeApplyPostorder(root.Left, f)
 }
