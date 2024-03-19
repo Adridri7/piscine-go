@@ -48,5 +48,5 @@ func main() {
 	piscine.BTreeInsertData(root, "1")
 	piscine.BTreeInsertData(root, "7")
 	piscine.BTreeInsertData(root, "5")
-	fmt.Println(piscine.BTreeLevelCount(root))
+	fmt.Println(piscine.BTreeIsBinary(root))
 }
