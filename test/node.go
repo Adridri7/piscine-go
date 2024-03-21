@@ -43,7 +43,7 @@ func printList(head *Node) {
 	fmt.Println()
 }*/
 
-func main() {
+func main1() {
 	root := &piscine.TreeNode{Data: "4"}
 	piscine.BTreeInsertData(root, "1")
 	piscine.BTreeInsertData(root, "7")
